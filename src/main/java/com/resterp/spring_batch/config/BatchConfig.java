@@ -1,4 +1,4 @@
-package com.emna.spring_batch_test.config;
+package com.resterp.spring_batch.config;
 
 import javax.sql.DataSource;
 

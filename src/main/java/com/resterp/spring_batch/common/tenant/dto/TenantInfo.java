@@ -1,13 +1,26 @@
 package com.resterp.spring_batch.common.tenant.dto;
 
-public class TenantRegistry {
+public class TenantInfo {
 
     private Long tenantId;
     private String tenantCode;
     private String tenantName;
-    private String dbName;
+    private String databaseName;
     private String schemaName;
     private Boolean active;
+
+    public TenantInfo() {
+    }
+
+    public TenantInfo(Long tenantId, String tenantCode, String tenantName,
+                      String databaseName, String schemaName, Boolean active) {
+        this.tenantId = tenantId;
+        this.tenantCode = tenantCode;
+        this.tenantName = tenantName;
+        this.databaseName = databaseName;
+        this.schemaName = schemaName;
+        this.active = active;
+    }
 
     public Long getTenantId() {
         return tenantId;
@@ -33,12 +46,12 @@ public class TenantRegistry {
         this.tenantName = tenantName;
     }
 
-    public String getDbName() {
-        return dbName;
+    public String getDatabaseName() {
+        return databaseName;
     }
 
-    public void setDbName(String dbName) {
-        this.dbName = dbName;
+    public void setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
     }
 
     public String getSchemaName() {
@@ -55,5 +68,17 @@ public class TenantRegistry {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "TenantInfo{" +
+                "tenantId=" + tenantId +
+                ", tenantCode='" + tenantCode + '\'' +
+                ", tenantName='" + tenantName + '\'' +
+                ", databaseName='" + databaseName + '\'' +
+                ", schemaName='" + schemaName + '\'' +
+                ", active=" + active +
+                '}';
     }
 }

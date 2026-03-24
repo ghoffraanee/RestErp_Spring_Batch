@@ -1,8 +1,8 @@
-package com.emna.spring_batch_test.employee.batch;
+package com.resterp.spring_batch.employee.batch;
 
 import javax.sql.DataSource;
 
-import com.emna.spring_batch_test.employee.dto.DimEmployee;
+import com.resterp.spring_batch.employee.dto.DimEmployee;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.beans.factory.annotation.Qualifier;

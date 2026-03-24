@@ -1,4 +1,4 @@
-package com.emna.spring_batch_test.runner;
+package com.resterp.spring_batch.runner;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;

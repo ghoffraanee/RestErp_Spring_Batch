@@ -1,4 +1,4 @@
-package com.emna.spring_batch_test;
+package com.resterp.spring_batch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

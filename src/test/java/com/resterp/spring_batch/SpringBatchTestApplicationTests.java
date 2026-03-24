@@ -1,4 +1,4 @@
-package com.emna.spring_batch_test;
+package com.resterp.spring_batch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

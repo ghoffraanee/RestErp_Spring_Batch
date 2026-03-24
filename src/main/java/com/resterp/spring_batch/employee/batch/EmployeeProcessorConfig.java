@@ -1,11 +1,11 @@
-package com.emna.spring_batch_test.employee.batch;
+package com.resterp.spring_batch.employee.batch;
 
 import java.time.LocalDateTime;
 
 import javax.sql.DataSource;
 
-import com.emna.spring_batch_test.employee.dto.DimEmployee;
-import com.emna.spring_batch_test.employee.dto.SourceEmployee;
+import com.resterp.spring_batch.employee.dto.DimEmployee;
+import com.resterp.spring_batch.employee.dto.SourceEmployee;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

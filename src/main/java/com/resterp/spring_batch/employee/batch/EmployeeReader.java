@@ -1,11 +1,11 @@
-package com.emna.spring_batch_test.employee.batch;
+package com.resterp.spring_batch.employee.batch;
 
 import java.util.List;
 
 import javax.sql.DataSource;
 
-import com.emna.spring_batch_test.employee.dto.SourceEmployee;
-import com.emna.spring_batch_test.employee.service.TenantContext;
+import com.resterp.spring_batch.employee.dto.SourceEmployee;
+import com.resterp.spring_batch.employee.service.TenantContext;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

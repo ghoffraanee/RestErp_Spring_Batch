@@ -1,11 +1,11 @@
-package com.emna.spring_batch_test.employee.service;
+package com.resterp.spring_batch.employee.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emna.spring_batch_test.employee.batch.EmployeeReader;
-import com.emna.spring_batch_test.employee.dto.DimEmployee;
-import com.emna.spring_batch_test.employee.dto.SourceEmployee;
+import com.resterp.spring_batch.employee.batch.EmployeeReader;
+import com.resterp.spring_batch.employee.dto.DimEmployee;
+import com.resterp.spring_batch.employee.dto.SourceEmployee;
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
