@@ -1,23 +1,20 @@
-package com.emna.spring_batch_test.tenant.dto;
+package com.resterp.spring_batch.common.tenant.dto;
 
-import java.time.LocalDateTime;
+public class TenantRegistry {
 
-public class DimTenant {
-
-    private Long tenantIdSource;
+    private Long tenantId;
     private String tenantCode;
     private String tenantName;
     private String dbName;
     private String schemaName;
     private Boolean active;
-    private LocalDateTime effectiveFrom;
 
-    public Long getTenantIdSource() {
-        return tenantIdSource;
+    public Long getTenantId() {
+        return tenantId;
     }
 
-    public void setTenantIdSource(Long tenantIdSource) {
-        this.tenantIdSource = tenantIdSource;
+    public void setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
     }
 
     public String getTenantCode() {
@@ -58,13 +55,5 @@ public class DimTenant {
 
     public void setActive(Boolean active) {
         this.active = active;
-    }
-
-    public LocalDateTime getEffectiveFrom() {
-        return effectiveFrom;
-    }
-
-    public void setEffectiveFrom(LocalDateTime effectiveFrom) {
-        this.effectiveFrom = effectiveFrom;
     }
 }

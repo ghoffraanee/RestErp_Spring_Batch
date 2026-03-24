@@ -24,7 +24,7 @@ public class JobStarter implements CommandLineRunner {
         this.jobLauncher = jobLauncher;
         this.loadDimTenantJob = loadDimTenantJob;
         this.employeeLoadService = employeeLoadService;
-        this.customerLoadService = customerLoadService;
+       this.customerLoadService = customerLoadService;
     }
 
     @Override
