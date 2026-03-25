@@ -4,6 +4,7 @@ package com.resterp.spring_batch.common.dimension.dto;
 public class DimDepartment {
 
     private Integer departmentKey;
+    private Integer companyId;
     private Integer departmentId;
     private String departmentName;
     private String managerName;
@@ -17,6 +18,14 @@ public class DimDepartment {
 
     public void setDepartmentKey(Integer departmentKey) {
         this.departmentKey = departmentKey;
+    }
+
+    public Integer getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Integer companyId) {
+        this.companyId = companyId;
     }
 
     public Integer getDepartmentId() {

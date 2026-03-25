@@ -1,4 +1,4 @@
-package com.resterp.spring_batch.common.dimension.dto;
+package com.resterp.spring_batch.rh.dimension.dto;
 
 
 import java.time.LocalDateTime;
@@ -7,6 +7,7 @@ public class DimJobOffer {
 
     private Integer jobOfferKey;      // PK (surrogate key)
     private Integer jobOfferId;       // ID source
+    private Integer companyId;
     private String title;
     private String contractType;
     private Integer departmentId;
@@ -49,6 +50,14 @@ public class DimJobOffer {
 
     public void setJobOfferId(Integer jobOfferId) {
         this.jobOfferId = jobOfferId;
+    }
+
+    public Integer getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Integer companyId) {
+        this.companyId = companyId;
     }
 
     public String getTitle() {
