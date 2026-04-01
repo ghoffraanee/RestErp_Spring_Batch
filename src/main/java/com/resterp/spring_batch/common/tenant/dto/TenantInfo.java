@@ -8,18 +8,20 @@ public class TenantInfo {
     private String databaseName;
     private String schemaName;
     private Boolean active;
+    private Long companyId;
 
     public TenantInfo() {
     }
 
     public TenantInfo(Long tenantId, String tenantCode, String tenantName,
-                      String databaseName, String schemaName, Boolean active) {
+                      String databaseName, String schemaName, Boolean active, Long companyId) {
         this.tenantId = tenantId;
         this.tenantCode = tenantCode;
         this.tenantName = tenantName;
         this.databaseName = databaseName;
         this.schemaName = schemaName;
         this.active = active;
+        this.companyId = companyId;
     }
 
     public Long getTenantId() {
@@ -70,6 +72,14 @@ public class TenantInfo {
         this.active = active;
     }
 
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
+    }
+
     @Override
     public String toString() {
         return "TenantInfo{" +
@@ -79,6 +89,7 @@ public class TenantInfo {
                 ", databaseName='" + databaseName + '\'' +
                 ", schemaName='" + schemaName + '\'' +
                 ", active=" + active +
+                ", companyId=" + companyId +
                 '}';
     }
 }

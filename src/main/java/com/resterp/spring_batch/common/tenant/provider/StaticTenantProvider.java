@@ -25,7 +25,8 @@ public class StaticTenantProvider implements TenantProvider {
                         "Alpha Company",    // À modifier plus tard : vrai tenant_name
                         "erp_mt_db",        // À modifier plus tard : vrai database_name si nécessaire
                         "alpha",            // À modifier plus tard : vrai schema_name
-                        true                // À modifier plus tard : vraie valeur active
+                        true ,              // À modifier plus tard : vraie valeur active
+                        1L
                 ),
                 new TenantInfo(
                         2L,                 // À modifier plus tard : vrai tenant_id venant de la BDD super admin
@@ -33,7 +34,8 @@ public class StaticTenantProvider implements TenantProvider {
                         "Beta Company",     // À modifier plus tard : vrai tenant_name
                         "erp_mt_db",        // À modifier plus tard : vrai database_name si nécessaire
                         "beta",             // À modifier plus tard : vrai schema_name
-                        true                // À modifier plus tard : vraie valeur active
+                        true ,               // À modifier plus tard : vraie valeur active
+                        2L
                 )
         );
     }

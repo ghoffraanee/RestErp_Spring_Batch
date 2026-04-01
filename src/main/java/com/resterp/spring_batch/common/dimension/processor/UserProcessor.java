@@ -35,8 +35,8 @@ public class UserProcessor {
 
         // Si companies_id existe dans la source, on le prend.
         // Sinon, comme tenant = company, on injecte le tenantId courant.
-        if (sourceUser.getCompaniesId() != null) {
-            dimUser.setCompanyId(sourceUser.getCompaniesId().intValue());
+        if (sourceUser.getCompanyId() != null) {
+            dimUser.setCompanyId(sourceUser.getCompanyId().intValue());
         } else if (tenantInfo.getTenantId() != null) {
             dimUser.setCompanyId(tenantInfo.getTenantId().intValue());
         } else {

@@ -7,7 +7,7 @@ public class DimJobOffer {
 
     private Integer jobOfferKey;      // PK (surrogate key)
     private Integer jobOfferId;       // ID source
-    private Integer companyId;
+    private Long companyId;
     private String title;
     private String contractType;
     private Integer departmentId;
@@ -20,12 +20,13 @@ public class DimJobOffer {
     public DimJobOffer() {
     }
 
-    public DimJobOffer(Integer jobOfferKey, Integer jobOfferId, String title,
+    public DimJobOffer(Integer jobOfferKey, Integer jobOfferId, Long companyId, String title,
                        String contractType, Integer departmentId,
                        String status, LocalDateTime postingDate,
                        Integer createdByUserId) {
         this.jobOfferKey = jobOfferKey;
         this.jobOfferId = jobOfferId;
+        this.companyId = companyId;
         this.title = title;
         this.contractType = contractType;
         this.departmentId = departmentId;
@@ -52,11 +53,11 @@ public class DimJobOffer {
         this.jobOfferId = jobOfferId;
     }
 
-    public Integer getCompanyId() {
+    public Long getCompanyId() {
         return companyId;
     }
 
-    public void setCompanyId(Integer companyId) {
+    public void setCompanyId(Long companyId) {
         this.companyId = companyId;
     }
 
@@ -115,6 +116,7 @@ public class DimJobOffer {
         return "DimJobOffer{" +
                 "jobOfferKey=" + jobOfferKey +
                 ", jobOfferId=" + jobOfferId +
+                ", companyId=" + companyId +
                 ", title='" + title + '\'' +
                 ", contractType='" + contractType + '\'' +
                 ", departmentId=" + departmentId +

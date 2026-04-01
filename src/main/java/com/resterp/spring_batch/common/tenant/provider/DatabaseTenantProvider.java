@@ -38,7 +38,8 @@ public class DatabaseTenantProvider implements TenantProvider {
                     tenant_name,
                     database_name,
                     schema_name,
-                    active
+                    active,
+                    company_id
                 from tenant_registry
                 """,
                 (rs, rowNum) -> new TenantInfo(
@@ -47,7 +48,8 @@ public class DatabaseTenantProvider implements TenantProvider {
                         rs.getString("tenant_name"),          // À adapter plus tard si le nom réel de colonne change
                         rs.getString("database_name"),        // À adapter plus tard si le nom réel de colonne change
                         rs.getString("schema_name"),          // À adapter plus tard si le nom réel de colonne change
-                        rs.getBoolean("active")               // À adapter plus tard si le nom réel de colonne change
+                        rs.getBoolean("active"),            // À adapter plus tard si le nom réel de colonne change
+                        rs.getLong("company_id")
                 )
         );
     }

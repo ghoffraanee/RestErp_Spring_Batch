@@ -4,8 +4,8 @@ package com.resterp.spring_batch.common.dimension.dto;
 public class DimDepartment {
 
     private Integer departmentKey;
-    private Integer companyId;
-    private Integer departmentId;
+    private Long departmentId;
+    private Long companyId;
     private String departmentName;
     private String managerName;
 
@@ -20,19 +20,19 @@ public class DimDepartment {
         this.departmentKey = departmentKey;
     }
 
-    public Integer getCompanyId() {
+    public Long getCompanyId() {
         return companyId;
     }
 
-    public void setCompanyId(Integer companyId) {
+    public void setCompanyId(Long companyId) {
         this.companyId = companyId;
     }
 
-    public Integer getDepartmentId() {
+    public Long getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartmentId(Integer departmentId) {
+    public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
     }
 
@@ -59,6 +59,7 @@ public class DimDepartment {
                 ", departmentId=" + departmentId +
                 ", departmentName='" + departmentName + '\'' +
                 ", managerName='" + managerName + '\'' +
+                ", companyId=" + companyId +
                 '}';
     }
 }

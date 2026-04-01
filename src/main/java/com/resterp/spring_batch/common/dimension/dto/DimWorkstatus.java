@@ -1,24 +1,21 @@
-package com.resterp.spring_batch.rh.dimension.dto;
+package com.resterp.spring_batch.common.dimension.dto;
 
 
 public class DimWorkstatus {
 
     private Integer workstatusKey;
-    private Integer workstatusId;
-    private String statusCode;
+    private Long workstatusId;
+    private Long companyId;
     private String statusLabel;
-    private String statusGroup;
 
     public DimWorkstatus() {
     }
 
-    public DimWorkstatus(Integer workstatusKey, Integer workstatusId, String statusCode,
-                         String statusLabel, String statusGroup) {
+    public DimWorkstatus(Integer workstatusKey, Long workstatusId, Long companyId, String statusLabel) {
         this.workstatusKey = workstatusKey;
         this.workstatusId = workstatusId;
-        this.statusCode = statusCode;
+        this.companyId = companyId;
         this.statusLabel = statusLabel;
-        this.statusGroup = statusGroup;
     }
 
     public Integer getWorkstatusKey() {
@@ -29,20 +26,20 @@ public class DimWorkstatus {
         this.workstatusKey = workstatusKey;
     }
 
-    public Integer getWorkstatusId() {
+    public Long getWorkstatusId() {
         return workstatusId;
     }
 
-    public void setWorkstatusId(Integer workstatusId) {
+    public void setWorkstatusId(Long workstatusId) {
         this.workstatusId = workstatusId;
     }
 
-    public String getStatusCode() {
-        return statusCode;
+    public Long getCompanyId() {
+        return companyId;
     }
 
-    public void setStatusCode(String statusCode) {
-        this.statusCode = statusCode;
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 
     public String getStatusLabel() {
@@ -53,22 +50,13 @@ public class DimWorkstatus {
         this.statusLabel = statusLabel;
     }
 
-    public String getStatusGroup() {
-        return statusGroup;
-    }
-
-    public void setStatusGroup(String statusGroup) {
-        this.statusGroup = statusGroup;
-    }
-
     @Override
     public String toString() {
         return "DimWorkstatus{" +
                 "workstatusKey=" + workstatusKey +
                 ", workstatusId=" + workstatusId +
-                ", statusCode='" + statusCode + '\'' +
+                ", companyId=" + companyId +
                 ", statusLabel='" + statusLabel + '\'' +
-                ", statusGroup='" + statusGroup + '\'' +
                 '}';
     }
 }

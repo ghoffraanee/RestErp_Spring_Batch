@@ -16,7 +16,7 @@ public class SourceUser {
     private LocalDateTime contractStart;
     private LocalDateTime contractEnd;
     private Long departmentId;
-    private Long companiesId;
+    private Long companyId;
 
     public SourceUser() {
     }
@@ -24,7 +24,7 @@ public class SourceUser {
     public SourceUser(Long userId, String firstname, String lastname, String name,
                       String email, Integer type, Boolean active, Integer gender,
                       LocalDateTime birthDate, LocalDateTime contractStart,
-                      LocalDateTime contractEnd, Long departmentId, Long companiesId) {
+                      LocalDateTime contractEnd, Long departmentId, Long companyId) {
         this.userId = userId;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -37,7 +37,7 @@ public class SourceUser {
         this.contractStart = contractStart;
         this.contractEnd = contractEnd;
         this.departmentId = departmentId;
-        this.companiesId = companiesId;
+        this.companyId = companyId;
     }
 
     public Long getUserId() {
@@ -136,12 +136,12 @@ public class SourceUser {
         this.departmentId = departmentId;
     }
 
-    public Long getCompaniesId() {
-        return companiesId;
+    public Long getCompanyId() {
+        return companyId;
     }
 
-    public void setCompaniesId(Long companiesId) {
-        this.companiesId = companiesId;
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 
     @Override
@@ -159,7 +159,7 @@ public class SourceUser {
                 ", contractStart=" + contractStart +
                 ", contractEnd=" + contractEnd +
                 ", departmentId=" + departmentId +
-                ", companiesId=" + companiesId +
+                ", companyId=" + companyId +
                 '}';
     }
 }

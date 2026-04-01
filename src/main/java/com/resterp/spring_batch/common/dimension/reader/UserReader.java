@@ -21,6 +21,7 @@ public class UserReader {
 
     public List<SourceUser> readUsers(TenantInfo tenant) {
         String schemaName = tenant.getSchemaName();
+        Long companyId = tenant.getCompanyId();
 
         String sql = """
                 select
@@ -35,8 +36,7 @@ public class UserReader {
                     birth_date,
                     contract_start,
                     contract_end,
-                    department_id,
-                    companies_id
+                    department_id
                 from %s.users_table
                 order by user_id
                 """.formatted(schemaName);
@@ -69,7 +69,8 @@ public class UserReader {
             }
 
             user.setDepartmentId((Long) rs.getObject("department_id"));
-            user.setCompaniesId((Long) rs.getObject("companies_id"));
+//            user.setCompanyId((Long) rs.getObject("company_id"));
+            user.setCompanyId(companyId);
 
             return user;
         });

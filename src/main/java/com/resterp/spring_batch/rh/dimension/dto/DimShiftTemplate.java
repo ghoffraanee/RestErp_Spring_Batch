@@ -7,8 +7,8 @@ import java.time.LocalTime;
 public class DimShiftTemplate {
 
     private Integer shiftTemplateKey;
-    private Integer templateId;
-    private Integer companyId;
+    private Long templateId;
+    private Long companyId;
     private String templateName;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -18,11 +18,12 @@ public class DimShiftTemplate {
     public DimShiftTemplate() {
     }
 
-    public DimShiftTemplate(Integer shiftTemplateKey, Integer templateId, String templateName,
+    public DimShiftTemplate(Integer shiftTemplateKey, Long templateId, Long companyId, String templateName,
                             LocalTime startTime, LocalTime endTime,
                             BigDecimal workingHoursPlanned, String pattern) {
         this.shiftTemplateKey = shiftTemplateKey;
         this.templateId = templateId;
+        this.companyId = companyId;
         this.templateName = templateName;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -38,19 +39,19 @@ public class DimShiftTemplate {
         this.shiftTemplateKey = shiftTemplateKey;
     }
 
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return templateId;
     }
 
-    public void setTemplateId(Integer templateId) {
+    public void setTemplateId(Long templateId) {
         this.templateId = templateId;
     }
 
-    public Integer getCompanyId() {
+    public Long getCompanyId() {
         return companyId;
     }
 
-    public void setCompanyId(Integer companyId) {
+    public void setCompanyId(Long companyId) {
         this.companyId = companyId;
     }
 
@@ -99,6 +100,7 @@ public class DimShiftTemplate {
         return "DimShiftTemplate{" +
                 "shiftTemplateKey=" + shiftTemplateKey +
                 ", templateId=" + templateId +
+                ", companyId=" + companyId +
                 ", templateName='" + templateName + '\'' +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
